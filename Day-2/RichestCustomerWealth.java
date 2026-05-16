@@ -14,7 +14,7 @@ public class RichestCustomerWealth {
 
         int[][] accounts = new int[rows][cols];
 
-        System.out.println("\n===== Enter Wealth Details =====");
+        System.out.println("\n====== Enter Wealth Details ======");
 
         for (int i = 0; i < rows; i++) {
 
