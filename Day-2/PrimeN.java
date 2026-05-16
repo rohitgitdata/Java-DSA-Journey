@@ -8,19 +8,26 @@ public class PrimeN{
             int c = 2;
             System.out.print("Enter the number : ");
             int num = sc.nextInt();
-            if(num <= 1){
-                System.out.println("Number is not a prime number");
+            boolean isPrime = true;
+            if(num <= 1) {
+                isPrime = false;
             }else{
                 while (c * c <= num) {
-                    if (num % c == 0) {
-                        System.out.println("Number is not a prime number");
+                    if (num % c == 0){
+                        isPrime = false;
                         break;
-                    }c++;
+                    }
+                    c++;
                 }
-            }if (c * c > num) {
-                    System.out.println("Number is a prime number");
+            }
+                if (isPrime) {
+                    System.out.println("This is a prime number");
+                } else {
+                    System.out.println("This is not a prime number");
                 }
             
+
+
         System.out.print("Enter 'yes' or 'no' for continue or stop : ");
         String stop = sc.next();
         if (stop.equalsIgnoreCase("no")) {
