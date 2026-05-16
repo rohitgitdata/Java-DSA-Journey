@@ -20,7 +20,6 @@ public class Fibb {
             b = b + a;
             a = temp;
             count ++;
-            
         }
     
         System.out.println("The fibbonacci number at term " + num + " is : " + b);
