@@ -19,16 +19,16 @@ public class PrimeUsingMethod {
         Scanner sc = new Scanner(System.in);
         boolean flag = true;
         while (flag) {
-            System.out.println("========Program Started=========");
+        System.out.println("========Program Started=========");
         System.out.print("Enter the you want to check : ");
         int num = sc.nextInt();
         boolean res = isPrime(num);
         System.out.println("Your entered number is prime : " + res);
-         System.out.println("========THE END=========");
-            System.out.print("Do you want to continue (y/n): ");
-            String ch = sc.next();
-            if (ch.equals("n")) {
-                flag = false;
+        System.out.println("========THE END=========");
+        System.out.print("Do you want to continue (y/n): ");
+        String ch = sc.next();
+        if (ch.equals("n")) {
+            flag = false;
             }
     }
         sc.close();
