@@ -37,7 +37,7 @@ public class RichestCustomerWealthRevision {
         }
         System.out.println();
         System.out.println("======RESULT======");
-        System.out.println("So, the richest costumer is Costumer: " + richCustomer + " with total wealth : " + maxWealth );
+        System.out.println("So, the richest costumer is Costumer: " + richCustomer + ", with total wealth : " + maxWealth );
 
         sc.close();
     }
