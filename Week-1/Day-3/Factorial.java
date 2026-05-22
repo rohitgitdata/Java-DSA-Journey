@@ -9,6 +9,7 @@ public class Factorial {
     } 
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
+        System.out.println("=======Program Started=======");
         boolean flag = true;
         while (flag) {
         System.out.print("Enter the number : ");
@@ -20,6 +21,7 @@ public class Factorial {
                 flag = false;
             }
         }
+        System.out.println("=========Program Completed==========");
         sc.close();
     }
 }
