@@ -9,10 +9,17 @@ public class Factorial {
     } 
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
+        boolean flag = true;
+        while (flag) {
         System.out.print("Enter the number : ");
         int num = sc.nextInt();
         System.out.println("The factorial of "+num + " is : " + fact(num));
-
+            System.out.print("You want to continue? (Y/N)");
+            String ch = sc.next();
+            if (ch.equalsIgnoreCase("N")) {
+                flag = false;
+            }
+        }
         sc.close();
     }
 }
