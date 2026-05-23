@@ -2,7 +2,7 @@ import java.util.*;
 
 public class SearchInRange {
     static int element(int[] arr, int target, int start, int end){
-        for (int i = 0; i< arr.length; i++) {
+        for (int i = start; i<= end; i++) {
             if (arr[i] == target) {
                 return i; 
             }
@@ -21,10 +21,9 @@ public class SearchInRange {
         System.out.println("Our array is : " + Arrays.toString(arr));
         System.out.print("Enter the target : " );
         int target = sc.nextInt();
-        System.out.println("=========Details for Range=========");
-        System.out.print("Enter the starting point : " );
+        System.out.print("Enter the Starting Index : " );
         int start = sc.nextInt();
-        System.out.print("Enter the end point : " );
+        System.out.print("Enter the Ending Index : " );
         int end = sc.nextInt();
         int res = element(arr, target,start,end);
         if (res != -1) {
