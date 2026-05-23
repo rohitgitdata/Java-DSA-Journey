@@ -20,7 +20,7 @@ public class SearchIn2DArray {
             int cols = sc.nextInt();
             int[][] arr = new int[rows][cols];
             for (int i = 0; i < rows; i++) {
-                System.out.println("Enetr row "+ (i + 1)  + " : ");
+                System.out.println("Enter row "+ (i + 1)  + " : ");
                 for (int j = 0; j < cols; j++) {
                     System.out.print("Enter element " + (j + 1) + " : ");
                     arr[i][j] = sc.nextInt();
