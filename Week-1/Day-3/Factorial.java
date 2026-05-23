@@ -15,7 +15,7 @@ public class Factorial {
         System.out.print("Enter the number : ");
         int num = sc.nextInt();
         System.out.println("The factorial of "+num + " is : " + fact(num));
-            System.out.print("You want to continue? (Y/N)");
+            System.out.print("You want to continue? (Y/N) :");
             String ch = sc.next();
             if (ch.equalsIgnoreCase("N")) {
                 flag = false;
