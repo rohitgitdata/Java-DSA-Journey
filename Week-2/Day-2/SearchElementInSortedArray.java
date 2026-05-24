@@ -20,6 +20,7 @@ public class SearchElementInSortedArray {
     }  
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
+        System.out.println("=========Program Started==========");
         System.out.print("Enter the number of elements of the sorted array : ");
         int num = sc.nextInt();
         int[] arr = new int[num];
@@ -37,6 +38,7 @@ public class SearchElementInSortedArray {
         } else {
             System.out.println("Your written element isn't found");
         }
+        System.out.println("-----------Program Completed Successfully-------------");
         sc.close();
     }
 }
