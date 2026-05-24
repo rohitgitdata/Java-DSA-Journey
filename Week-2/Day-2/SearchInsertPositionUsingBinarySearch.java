@@ -31,11 +31,7 @@ public class SearchInsertPositionUsingBinarySearch {
         System.out.print("Enter target : ");
         int target = sc.nextInt();
         int ans = searchInsert(arr, target);
-        if (ans!= -1) {
-            System.out.println("Element found at : " + ans);
-        } else {
-            System.out.println("Your written element isn't found");
-        }
+        System.out.println("Search Insert Position : " + ans);
         sc.close();
     }
 }
