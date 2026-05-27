@@ -1,6 +1,6 @@
 import java.util.*;
 
-public class BuubleSorting {
+public class BubleSorting {
     static void sort(int[] arr){
         boolean flag;
         for (int i = 0; i < arr.length - 1; i++) {
