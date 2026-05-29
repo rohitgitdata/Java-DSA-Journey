@@ -44,7 +44,7 @@ public class BinarySearchWithSorting {
         System.out.print("Enter the number of elements of the array : ");
         int num = sc.nextInt();
         int[] arr = new int[num];
-        System.out.println("! ENTER SORTED ARRAY ONLY !");
+        System.out.println("! ENTER ARRAY ELEMENTS!");
         for (int i = 0; i < arr.length; i++) {
             System.out.print("Enter element "+ (i + 1) + " : ");
             arr[i] = sc.nextInt();
