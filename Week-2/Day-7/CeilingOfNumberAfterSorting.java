@@ -34,12 +34,13 @@ public class CeilingOfNumberAfterSorting {
             } else{
                 return mid; // Return the index of the found element
 
-            }if(start >=res.length){
-                return -1;
             }
-            
         }
+        if(start >=res.length){
+                return -1;
+            }else{
         return start; // Return the index of the ceiling element
+            }
     }    
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
@@ -59,7 +60,7 @@ public class CeilingOfNumberAfterSorting {
         int target = sc.nextInt();
         int ans = search(res, target);
         if (ans != -1) {
-            System.out.println("Ceiling element is : " + ans);
+            System.out.println("Ceiling element is : " + res[ans]);
         } else {
             System.out.println("No ceiling element found");
         }
