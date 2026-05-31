@@ -66,6 +66,7 @@ public class FirstAndLastPosition {
 
         System.out.println("First Position : " + first);
         System.out.println("Last Position : " + last);
+        System.out.println("So, we have total " + ((last + 1)-first) + " no. of " + target );
 
         sc.close();
     }
