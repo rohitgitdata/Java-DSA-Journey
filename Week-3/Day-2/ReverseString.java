@@ -19,13 +19,15 @@ public class ReverseString {
     }
 
     public static void main(String[] args) {
-
-        char[] arr = {'h','e','l','l','o'};
-
-        System.out.println("Original Array : " + Arrays.toString(arr));
+        String str ="hello";
+        char[] arr = str.toCharArray();
+        System.out.println("Original String : " + str);
+        System.out.println("Original Character Array : " + Arrays.toString(arr));
 
         reverse(arr);
 
         System.out.println("Reversed Array : " + Arrays.toString(arr));
+        String rev = new String(arr);
+        System.out.println("Reverse String : " + rev);
     }
 }
