@@ -38,7 +38,7 @@ public class CountTheNumberOfConsistentStrings {
 
         String allowed = "ab";
         String[] words = {"ad", "bd", "aaab", "baa", "badab"};
-
-        System.out.println(countConsistentStrings(allowed, words));
+        int ans = countConsistentStrings(allowed, words);
+        System.out.println("Consistent Strings are : " + ans);
     }
 }
