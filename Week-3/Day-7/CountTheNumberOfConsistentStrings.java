@@ -21,13 +21,11 @@ public class CountTheNumberOfConsistentStrings {
                         break;
                     }
                 }
-
                 if (!found) {
                     valid = false;
                     break;
                 }
             }
-
             if (valid) {
                 count++;
             }
