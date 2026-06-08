@@ -48,13 +48,31 @@ public class LL1 {
         size --;
         return val;
     }
+    public Node get(int index){
+        Node temp = head;
+        for (int i = 0; i < index; i++) {
+            temp = temp.next;
+        }
+        return temp;
+    }
+    public int deleteLast(){
+        if (head == null) {
+            return deleteFirst();
+        }
+        int val = tail.value;
+        Node secondLast = get(size - 2);
+        tail = secondLast;
+        tail.next = null;
+        size --;
+        return val;
+    }
     private class Node{
         private int value;
         private Node next;
         public Node(int value){
             this.value = value;
-        }//Constructor Close
-    }//Node Class close
+        } //Constructor Close
+    } //Node Class close
     public static void main(String[] args) {
         LL1 list = new LL1();
         list.insertFirst(10);
@@ -62,7 +80,10 @@ public class LL1 {
         list.insertFirst(30);
         list.insertLast(40);
         list.display();
-        list.deleteFirst();
+        System.out.println(list.deleteFirst());
+        list.display();
+        System.out.println(list.get(2).value);
+        System.out.println(list.deleteLast());
         list.display();
     }
-}//LL1 close
+} //LL1 close
