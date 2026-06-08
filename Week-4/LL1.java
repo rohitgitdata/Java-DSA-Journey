@@ -66,6 +66,21 @@ public class LL1 {
         size --;
         return val;
     }
+    public void insert(int val, int index){
+        if (index == 0) {
+            insertFirst(val);
+            return;
+        }
+        if (index == size) {
+            insertLast(val);
+            return;
+        }
+        Node prev = get(index - 1);
+        Node node = new Node(val);
+        node.next = prev.next;
+        prev.next = node;
+        size++;
+    }
     private class Node{
         private int value;
         private Node next;
@@ -84,6 +99,9 @@ public class LL1 {
         list.display();
         System.out.println(list.get(2).value);
         System.out.println(list.deleteLast());
+        list.display();
+        list.insert(50, 2);
+        list.insert(60, 3);
         list.display();
     }
 } //LL1 close
