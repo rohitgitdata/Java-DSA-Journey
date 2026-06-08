@@ -81,6 +81,19 @@ public class LL1 {
         prev.next = node;
         size++;
     }
+    public int delete(int index){
+        if (index == 0) {
+            return deleteFirst();
+        }
+        if (index == size - 1) {
+            return deleteLast();
+        }
+        int val = get(index).value;
+        Node prev = get(index - 1);
+        prev.next = prev.next.next;
+        size--;
+        return val;
+    }
     private class Node{
         private int value;
         private Node next;
@@ -102,6 +115,8 @@ public class LL1 {
         list.display();
         list.insert(50, 2);
         list.insert(60, 3);
+        list.display();
+        System.out.println(list.delete(2));
         list.display();
     }
 } //LL1 close
