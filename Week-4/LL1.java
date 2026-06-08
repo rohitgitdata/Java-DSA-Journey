@@ -36,6 +36,18 @@ public class LL1 {
         }
         System.out.println("END");
     }
+    public int deleteFirst(){
+        if (head == null) {
+            return -1;
+        }
+        int val = head.value;
+        head = head.next;
+        if (head == null) {
+            tail = null;
+        }
+        size --;
+        return val;
+    }
     private class Node{
         private int value;
         private Node next;
@@ -49,6 +61,8 @@ public class LL1 {
         list.insertFirst(20);
         list.insertFirst(30);
         list.insertLast(40);
+        list.display();
+        list.deleteFirst();
         list.display();
     }
 }//LL1 close
