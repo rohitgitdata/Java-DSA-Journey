@@ -102,6 +102,8 @@ public class LL1 {
         } //Constructor Close
     } //Node Class close
     public static void main(String[] args) {
+        System.out.println("==== OUR LIST IS : ====");
+        System.out.println();
         LL1 list = new LL1();
         list.insertFirst(10);
         list.insertFirst(20);
@@ -120,3 +122,8 @@ public class LL1 {
         list.display();
     }
 } //LL1 close
+
+
+
+
+    
