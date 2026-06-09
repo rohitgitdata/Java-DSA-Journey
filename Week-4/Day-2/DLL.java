@@ -1,5 +1,3 @@
-import java.nio.channels.NoConnectionPendingException;
-
 public class DLL {
     private int size;
     private Node head;
@@ -30,8 +28,33 @@ public class DLL {
         }
         temp.next = node;
         node.prev = temp;
+        size++;
     }
-    
+    public Node get(int index){
+        Node temp = head;
+        for (int i = 0; i < index; i++) {
+            temp = temp.next;
+        }
+        return temp;
+    }
+    public void insert(int index, int value){
+        if (index == 0) {
+            insertFirst(value);
+            return;
+        }
+        if (index == size) {
+            insertLast(value);
+            return;
+        }
+        Node node = new Node(value);
+        Node p = get(index - 1);
+        node.next = p.next;
+        p.next = node;
+        node.prev = p;
+        node.next.prev = node;
+
+        size++;
+    }
     public void display(){
         Node temp = head;
         System.out.print("START <-> ");
@@ -79,7 +102,9 @@ public class DLL {
         list.insertFirst(40);
         list.insertFirst(50);
         list.insertFirst(60);
-        list.insertLast(70);
+        list.insertLast(5);
+        list.insert(3, 45);
+        list.insert(2, 55);
         list.display();
         list.rev();
         
