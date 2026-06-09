@@ -55,6 +55,32 @@ public class DLL {
 
         size++;
     }
+    public Node find (int value){
+        Node temp = head;
+         while (temp != null) {
+            if (temp.value == value) {
+                return temp;
+            }
+            temp = temp.next;
+        }
+        return null;
+    }
+    public void insertAfter(int after, int value){
+        Node p = find(after);
+        if (p == null) {
+            System.out.println("Value Not Found");
+            return;
+        }
+        Node node = new Node(value);
+        node.next = p.next;
+        p.next = node;
+        node.prev = p;
+        if (node.next != null) {
+            node.next.prev = node;
+        }
+        size++;
+        
+    }
     public void display(){
         Node temp = head;
         System.out.print("START <-> ");
@@ -103,8 +129,9 @@ public class DLL {
         list.insertFirst(50);
         list.insertFirst(60);
         list.insertLast(5);
-        list.insert(3, 45);
-        list.insert(2, 55);
+        list.insert(3, 35);
+        list.insert(2, 45);
+        list.insertAfter(60, 55);
         list.display();
         list.rev();
         
