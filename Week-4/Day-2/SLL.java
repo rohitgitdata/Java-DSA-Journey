@@ -1,17 +1,11 @@
 public class SLL {
 
     private Node head;
-    private int size;
-
-    public SLL() {
-        this.size = 0;
-    }
 
     public void insertFirst(int value) {
         Node node = new Node(value);
         node.next = head;
         head = node;
-        size++;
     }
 
     public void display() {
