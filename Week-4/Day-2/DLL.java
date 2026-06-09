@@ -71,13 +71,22 @@ public class DLL {
             System.out.println("Value Not Found");
             return;
         }
+        /* Another approach */
+        // Node node = new Node(value);
+        // node.next = p.next;
+        // p.next = node;
+        // node.prev = p;
+        // if (node.next != null) {
+        //     node.next.prev = node;
+        // }
+        // size++;
+
         Node node = new Node(value, p.next, p);
         p.next = node;
         if (node.next != null) {
             node.next.prev = node;
         }
         size++;
-        
     }
     public void display(){
         Node temp = head;
