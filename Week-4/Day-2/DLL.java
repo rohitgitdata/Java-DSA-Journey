@@ -18,19 +18,7 @@ public class DLL {
         head = node;    
         size++;
     }
-    public void insertLast(int val){
-        Node node = new Node(val);
-        if (head == null) {
-            node.prev = null;
-            head = node;
-        }
-        Node temp = head;
-        while (temp.next != null) {
-            temp = temp.next;
-        }
-        temp.next = node;
-        node.prev = temp;
-    }
+    
     public void display(){
         Node temp = head;
         System.out.print("START <-> ");
@@ -78,8 +66,8 @@ public class DLL {
         list.insertFirst(40);
         list.insertFirst(50);
         list.insertFirst(60);
-        list.insertLast(70);
         list.display();
         list.rev();
+        
     }
 } // DLL class end
