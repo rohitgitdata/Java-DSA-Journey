@@ -25,6 +25,11 @@ public class CLL {
             return 0;
         }
         if (head.value == val) {
+            if (head == tail) {
+                head = null;
+                tail = null;
+                return val;
+            }
             tail.next = head.next;
             head = head.next;
             return val;
