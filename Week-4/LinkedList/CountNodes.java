@@ -49,7 +49,11 @@ public class CountNodes{
         list.insertfirst(40);
         list.insertfirst(50);
         list.insertfirst(60);
+        System.out.println("=====Program start=====");
+        System.out.println();
         list.display();
         System.out.println("So, the total number of nodes in Linked list : " + list.count());
+        System.err.println();
+        System.out.println("======Program end=====");
     }
 }
