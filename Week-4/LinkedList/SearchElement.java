@@ -53,6 +53,8 @@ public class SearchElement {
         list.insertFirst(40);
         list.insertFirst(50);
         list.insertFirst(60);
+        System.out.println("=====Program start=====");
+        System.out.println();
         list.display();
         boolean res = list.isFound(20);
         if (res) {
@@ -60,5 +62,7 @@ public class SearchElement {
         }else{
         System.out.println("Element not found");
         }
+        System.err.println();
+        System.out.println("======Program end=====");
     }
 }
