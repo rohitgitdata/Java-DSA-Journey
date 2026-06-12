@@ -37,7 +37,7 @@ public class DynamicStack {
         }
         public int peek() throws Exception{
             if (isEmpty()) {
-                System.out.println("stack is empty");
+                System.out.println("Stack is empty");
             }
             int top = data[ptr];
             return top;
@@ -57,6 +57,15 @@ public class DynamicStack {
         stack.push(10);
             System.err.println("The last element of the stack is : " + stack.peek());
 
+        System.out.println();
+           try {
+            System.err.println("The last element of the stack is : " + stack.peek());
+           } catch (Exception e) {
+            System.out.println(e.getMessage());
+           }
+           System.out.println();
+        try {
+            System.out.println("| " + stack.pop() + " |");
         System.out.println("| " + stack.pop() + " |");
         System.out.println("| " + stack.pop() + " |");
         System.out.println("| " + stack.pop() + " |");
@@ -69,5 +78,8 @@ public class DynamicStack {
         System.out.println("| " + stack.pop() + " |");
         System.out.println("| " + stack.pop() + " |");
         System.out.println(("| __ |"));            
+        } catch (Exception e) {
+            System.out.println(e.getMessage());
+        }       
         }
 }
