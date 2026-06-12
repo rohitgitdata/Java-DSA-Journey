@@ -20,7 +20,7 @@ public class CustomStack {
         
         public boolean push(int item) throws Exception{
             if (isFull()) {
-                throw new Exception("Stack is full");
+                throw new Exception("Your Stack is full you cannot add anything in this");
             }
             ptr++;
             data[ptr] = item;
@@ -28,7 +28,7 @@ public class CustomStack {
         }
         public int pop() throws Exception{
             if (isEmpty()) {
-                throw new Exception("Stack is Empty");
+                throw new Exception("Your Stack is Empty you connot access and remove anything in this");
             }
             int removed = data[ptr];
             ptr--;
@@ -42,21 +42,32 @@ public class CustomStack {
             return top;
         }
         public static void main(String[] args)throws Exception {
-            CustomStack stack = new CustomStack(10);
-        stack.push(10);
-        stack.push(20);
-        stack.push(30);
-        stack.push(40);
-        stack.push(50);
-        stack.push(60);
-        stack.push(70);
-        stack.push(80);
-        stack.push(90);
-        stack.push(100);
-        // stack.push(10);
+        CustomStack stack = new CustomStack(10);
+        System.out.println();
+        try {
+            stack.push(10);
+            stack.push(20);
+            stack.push(30);
+            stack.push(40);
+            stack.push(50);
+            stack.push(60);
+            stack.push(70);
+            stack.push(80);
+            stack.push(90);
+            stack.push(100);
+            stack.push(10);
+        } catch (Exception e) {
+            System.out.println(e.getMessage());
+        }
+        System.out.println();
+           try {
             System.err.println("The last element of the stack is : " + stack.peek());
-
-        System.out.println("| " + stack.pop() + " |");
+           } catch (Exception e) {
+            System.out.println(e.getMessage());
+           }
+           System.out.println();
+        try {
+            System.out.println("| " + stack.pop() + " |");
         System.out.println("| " + stack.pop() + " |");
         System.out.println("| " + stack.pop() + " |");
         System.out.println("| " + stack.pop() + " |");
@@ -67,5 +78,9 @@ public class CustomStack {
         System.out.println("| " + stack.pop() + " |");
         System.out.println("| " + stack.pop() + " |");
         System.out.println(("| __ |"));            
+        } catch (Exception e) {
+            System.out.println(e.getMessage());
+        }
+        
         }
 }
