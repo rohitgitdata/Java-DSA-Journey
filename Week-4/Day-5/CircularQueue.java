@@ -57,17 +57,42 @@ public class CircularQueue {
             System.out.println("This is our circular queue with complexity constant except display method !!!");
             CircularQueue queue = new CircularQueue(10);
             System.out.println();
-        queue.insert(10);
+        try {
+            queue.insert(10);
             queue.insert(20);
             queue.insert(30);
             queue.insert(40);
             queue.insert(50);
             queue.insert(60);
-
-            queue.display();
-
-            System.err.println("Removes item : " + queue.remove());
-
-            queue.display();
+            queue.insert(70);
+            queue.insert(80);
+            queue.insert(90);
+            queue.insert(100);
+            queue.insert(10);
+        } catch (Exception e) {
+            System.out.println(e.getMessage());
+        }
+        System.out.println();
+           try {
+            System.err.println("The first element of the queue is : " + queue.peek());
+           } catch (Exception e) {
+            System.out.println(e.getMessage());
+           }
+           System.out.println();
+        try {
+            System.out.println("| " + queue.remove() + " |");
+        System.out.println("| " + queue.remove() + " |");
+        System.out.println("| " + queue.remove() + " |");
+        System.out.println("| " + queue.remove() + " |");
+        System.out.println("| " + queue.remove() + " |");
+        System.out.println("| " + queue.remove() + " |");
+        System.out.println("| " + queue.remove() + " |");
+        System.out.println("| " + queue.remove() + " |");
+        System.out.println("| " + queue.remove() + " |");
+        System.out.println("| " + queue.remove() + " |");
+        System.out.println(("| __ |"));            
+        } catch (Exception e) {
+            System.out.println(e.getMessage());
+        }
     }
 }
