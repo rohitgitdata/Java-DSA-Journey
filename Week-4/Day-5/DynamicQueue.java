@@ -19,16 +19,19 @@ public class DynamicQueue {
         public boolean isEmpty(){
             return size == 0;
         }    
-        public boolean insert(int item) throws Exception{
-            if (isFull()) {
+        public boolean insert(int item) throws Exception {
+            if (isFull()){
                 int[] temp = new int[data.length * 2];
-                for (int i = 0; i < data.length; i++) {
-                    temp[i] = data[i];
+                for (int i = 0; i < size; i++) {
+                    temp[i] = data[(front + i) % data.length];
                 }
+
+                front = 0;
+                end = size;
                 data = temp;
             }
             data[end] = item;
-            end++;
+            end = (end + 1) % data.length;
             size++;
             return true;
         }
