@@ -56,6 +56,7 @@ public class CustomQueue {
             System.out.println("END");
         }
         public static void main(String[] args) throws Exception{
+            System.out.print("=====PROGRAM STARTED======");
             CustomQueue queue = new CustomQueue(10);
             System.out.println();
         try {
@@ -95,5 +96,6 @@ public class CustomQueue {
         } catch (Exception e) {
             System.out.println(e.getMessage());
         }
+        System.out.println("======PROGRAM ENDED======");
     }
 }
