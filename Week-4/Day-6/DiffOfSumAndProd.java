@@ -17,6 +17,8 @@ public class DiffOfSumAndProd {
     }
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
+        System.out.println("========Program Started========");
+        System.out.println();
         System.out.print("Enter a number : ");
         int n = sc.nextInt();
         DiffOfSumAndProd obj = new DiffOfSumAndProd();
@@ -24,6 +26,8 @@ public class DiffOfSumAndProd {
         System.out.println("Sum of the digits is : " + obj.sum);
         System.out.println("Product of the digits is : "+ obj.prod);
         System.out.println("So the difference of the sum and the product of the digits is : "+ ans);
+        System.err.println();
+        System.out.println("========Program Ended=========");
         sc.close();
 
     }    
