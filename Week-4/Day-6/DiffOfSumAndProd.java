@@ -21,6 +21,8 @@ public class DiffOfSumAndProd {
         int n = sc.nextInt();
         DiffOfSumAndProd obj = new DiffOfSumAndProd();
         int ans = obj.subtractProductAndSum(n);
+        System.out.println("Sum of the digits is : " + obj.sum);
+        System.out.println("Product of the digits is : "+ obj.prod);
         System.out.println("So the difference of the sum and the product of the digits is : "+ ans);
         sc.close();
 
