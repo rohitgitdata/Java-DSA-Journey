@@ -54,6 +54,6 @@ public class CountNodes{
         list.display();
         System.out.println("So, the total number of nodes in Linked list : " + list.count());
         System.err.println();
-        System.out.println("======Program end=====");
+        System.out.println("======Program end======");
     }
 }
