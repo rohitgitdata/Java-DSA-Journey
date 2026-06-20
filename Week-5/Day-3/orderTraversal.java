@@ -74,6 +74,17 @@ public class orderTraversal {
         postOrder(node.right);
         System.out.print(node.value + " ");
     }
+    public void inOrder(){
+        inOrder(root);
+    }
+    private void inOrder(Node node){
+        if (node == null) {
+            return;
+        }
+        inOrder(node.left);
+        System.out.print(node.value + " ");
+        inOrder(node.right);
+    }
 
     private class Node {
         private int value;
@@ -97,5 +108,8 @@ public class orderTraversal {
         System.out.println();
         System.out.print("THE POSTORDER TRAVERSAL OF TREE IS : ");
         tree.postOrder();
+        System.out.println();
+        System.out.print("THE INORDER TRAVERSAL OF TREE IS : ");
+        tree.inOrder();
     }
 }
